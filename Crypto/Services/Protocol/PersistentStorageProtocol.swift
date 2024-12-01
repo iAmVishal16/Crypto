@@ -10,6 +10,6 @@ import Foundation
 protocol PersistentStorageProtocol {
     func saveCryptos(_ cryptos: [Crypto])
     func fetchAllCryptos() -> [Crypto]
-    func fetchFilteredCryptos(isActive: Bool?, isNew: Bool?, type: String?)
+    func fetchFilteredCryptos(isActive: Bool?, isNew: Bool?, type: String?) -> [Crypto]
     func clearAllCryptos()
 }

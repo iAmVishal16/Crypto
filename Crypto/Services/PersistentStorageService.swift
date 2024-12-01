@@ -65,7 +65,7 @@ final class PersistentStorageService: PersistentStorageProtocol {
     }
 
     // MARK: - Fetch Filtered Cryptos
-    func fetchFilteredCryptos(isActive: Bool?, isNew: Bool?, type: String?) -> [Crypto] {
+    func fetchFilteredCryptos(isActive: Bool? = nil, isNew: Bool? = nil, type: String? = nil) -> [Crypto] {
         let fetchRequest: NSFetchRequest<CryptoEntity> = CryptoEntity.fetchRequest()
         var predicates: [NSPredicate] = []
 
